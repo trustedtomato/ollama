@@ -579,6 +579,7 @@ struct llama_server_context
         slot->sparams.mirostat          = json_value(data, "mirostat",          default_sparams.mirostat);
         slot->sparams.mirostat_tau      = json_value(data, "mirostat_tau",      default_sparams.mirostat_tau);
         slot->sparams.mirostat_eta      = json_value(data, "mirostat_eta",      default_sparams.mirostat_eta);
+        slot->sparams.grammar           = json_value(data, "grammar",           default_sparams.grammar);
         slot->sparams.penalize_nl       = json_value(data, "penalize_nl",       default_sparams.penalize_nl);
         slot->params.n_keep             = json_value(data, "n_keep",            slot->params.n_keep);
         slot->params.seed               = json_value(data, "seed",              default_params.seed);
@@ -1114,6 +1115,7 @@ struct llama_server_context
             {"mirostat",          slot.sparams.mirostat},
             {"mirostat_tau",      slot.sparams.mirostat_tau},
             {"mirostat_eta",      slot.sparams.mirostat_eta},
+            {"grammar",           slot.sparams.grammar},
             {"penalize_nl",       slot.sparams.penalize_nl},
             {"stop",              slot.params.antiprompt},
             {"n_predict",         slot.params.n_predict},
